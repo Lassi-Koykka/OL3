@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+  <head>
+    <title>📆 Olkiluoto 3</title>
+    <meta name="description" content="Olkiluoto 3">
+    <meta name="keywords" content="Olkiluoto 3 Olkiluoto3 ydinreaktori ydinvoimala OL3 myöhästyminen myöhässä">
+  </head>
+  <body>
+    <div class="content">
+      <div>
+      <h1 style="margin-bottom: 0">Olkiluoto 3<br/>on nyt</h1>
+        <ul>
+          <li><span id="days">000</span>Päivää</li>
+        </ul>
+        <h1 style="margin-top: 0">myöhässä</h1>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  const daysLate = (new Date().getTime() - new Date("2009-05-01").getTime()) / (1000 * 3600 * 24) ;
+  document.getElementById("days").innerText = daysLate.toFixed(0);
+</script>
+
+<style>
+  html {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2em;
+    text-transform: uppercase;
+    text-weight: normal
+  }
+
+  body {
+    position: relative
+    overflow-x: hidden;
+    text-align: center;
+    overflow: hidden;
+    margin: auto;
+    padding: 0;
+    width: auto;
+    height: 100vh;
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 16px;
+  }
+
+  li {
+    display: inline-block;
+    font-size: 2em;
+    list-style-type: none;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  li span {
+    display: block;
+    font-size: 4.5rem;
+  }
+
+  .content {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('OL3.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: grid;
+    place-items: center;
+    text-shadow: black 2px 2px 2px;
+    position: absolute;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+  }
+
+</style>
